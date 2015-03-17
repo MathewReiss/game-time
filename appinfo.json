@@ -1,0 +1,153 @@
+{
+    "appKeys": {
+        "COLOR": 0,
+        "GAME": 1
+    },
+    "capabilities": [
+        "configurable"
+    ],
+    "companyName": "MathewReiss",
+    "longName": "Game Time",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/mario_stand.png",
+                "name": "MARIO_STAND",
+                "type": "png"
+            },
+            {
+                "file": "images/mario_jump.png",
+                "name": "MARIO_JUMP",
+                "type": "png"
+            },
+            {
+                "file": "images/mario_ground.png",
+                "name": "GROUND",
+                "type": "png"
+            },
+            {
+                "file": "images/mario_block.png",
+                "name": "BLOCK",
+                "type": "png"
+            },
+            {
+                "file": "images/Spr_1b_007.png",
+                "name": "SQ_FRONT",
+                "type": "png"
+            },
+            {
+                "file": "images/Spr_1b_007_2.png",
+                "name": "SQ_BACK",
+                "type": "png"
+            },
+            {
+                "file": "images/Spr_1b_004.png",
+                "name": "CHAR_BACK",
+                "type": "png"
+            },
+            {
+                "file": "images/bulba_front_rb.png",
+                "name": "FRONT_RB",
+                "type": "png"
+            },
+            {
+                "file": "fonts/Pokemon GB.ttf",
+                "name": "POKEMON_18",
+                "type": "font"
+            },
+            {
+                "file": "images/corner_icon.png",
+                "name": "CORNER",
+                "type": "png"
+            },
+            {
+                "file": "images/k6_bw.png",
+                "name": "K6",
+                "type": "png"
+            },
+            {
+                "file": "images/k5_bw.png",
+                "name": "K5",
+                "type": "png"
+            },
+            {
+                "file": "images/k4_bw.png",
+                "name": "K4",
+                "type": "png"
+            },
+            {
+                "file": "images/k3_bw.png",
+                "name": "K3",
+                "type": "png"
+            },
+            {
+                "file": "images/k2_bw.png",
+                "name": "K2",
+                "type": "png"
+            },
+            {
+                "file": "images/k1_bw.png",
+                "name": "K1",
+                "type": "png"
+            },
+            {
+                "file": "images/k0_bw.png",
+                "name": "K0",
+                "type": "png"
+            },
+            {
+                "file": "fonts/KirbyClassic.ttf",
+                "name": "FONT_KIRBY_28",
+                "type": "font"
+            },
+            {
+                "file": "fonts/Super-Mario-Bros--3.ttf",
+                "name": "MARIO_24",
+                "type": "font"
+            },
+            {
+                "file": "images/kirby_100_bw.png",
+                "name": "KIRBY_BG",
+                "type": "png"
+            },
+            {
+                "file": "images/dk_bg_bw.png",
+                "name": "DK_BG",
+                "type": "png"
+            },
+            {
+                "file": "images/mario_bg.png",
+                "name": "MARIO_BG",
+                "type": "png"
+            },
+            {
+                "file": "fonts/ufonts.com_arial-black-italic.ttf",
+                "name": "ARIAL_32",
+                "type": "font"
+            },
+            {
+                "file": "images/pwr_bw.png",
+                "name": "POWER_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/gb_logo_bw.png",
+                "name": "GB_LOGO",
+                "type": "png"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "Game Time",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
+    "uuid": "233d90df-fc09-4c66-9f57-261c128ea568",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
