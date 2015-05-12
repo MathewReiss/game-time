@@ -262,13 +262,13 @@ void handle_tick(struct tm *tick_time, TimeUnits units_changed){
 			current_game = KIRBY;
 		}
 		else if(current_game == KIRBY){
-			APP_LOG(APP_LOG_LEVEL_DEBUG, "Current Game: KIRBY");
+			//APP_LOG(APP_LOG_LEVEL_DEBUG, "Current Game: KIRBY");
 			kirby_deinit();
-			APP_LOG(APP_LOG_LEVEL_DEBUG, "KIRBY Deinit");			
+			//APP_LOG(APP_LOG_LEVEL_DEBUG, "KIRBY Deinit");			
 			pkmn_handle_init(time_layer, RED);
-			APP_LOG(APP_LOG_LEVEL_DEBUG, "POKEMON Init");
+			//APP_LOG(APP_LOG_LEVEL_DEBUG, "POKEMON Init");
 			current_game = POKEMON_RED;
-			APP_LOG(APP_LOG_LEVEL_DEBUG, "Current Game: POKEMON");
+			//APP_LOG(APP_LOG_LEVEL_DEBUG, "Current Game: POKEMON");
 		}
 		else if(current_game == POKEMON_RED){
 			pkmn_handle_deinit();
@@ -311,11 +311,11 @@ void handle_tick(struct tm *tick_time, TimeUnits units_changed){
 	}
 	
 	if(current_game == POKEMON_RED || current_game == POKEMON_BLUE){
-		APP_LOG(APP_LOG_LEVEL_DEBUG, "Current Game: POKEMON");
+		//APP_LOG(APP_LOG_LEVEL_DEBUG, "Current Game: POKEMON");
 		pkmn_handle_tick(tick_time, units_changed);
-		APP_LOG(APP_LOG_LEVEL_DEBUG, "POKEMON Handle Tick");
+		//APP_LOG(APP_LOG_LEVEL_DEBUG, "POKEMON Handle Tick");
 		layer_mark_dirty(time_layer);
-		APP_LOG(APP_LOG_LEVEL_DEBUG, "layer dirty");
+		//APP_LOG(APP_LOG_LEVEL_DEBUG, "layer dirty");
 		return;
 	}
 	
@@ -356,8 +356,6 @@ void handle_init(void){
 	load_game_fonts();
 	gb_char_size = graphics_text_layout_get_content_size("1", gameboy_font, GRect(0,0,32,32), GTextOverflowModeFill, GTextAlignmentLeft);
 	
-	init_time();
-	
 	gb_logo = gbitmap_create_with_resource(RESOURCE_ID_GB_LOGO);
 	pwr_icon = gbitmap_create_with_resource(RESOURCE_ID_POWER_ICON);
 	
@@ -366,8 +364,6 @@ void handle_init(void){
 	
 	layer_add_child(window_get_root_layer(my_window), time_layer);
 	window_stack_push(my_window, true);
-	
-	tick_timer_service_subscribe(MINUTE_UNIT, handle_tick);
 	
 	//TESTING ONLY
 	//light_enable(true);
@@ -387,6 +383,10 @@ void handle_init(void){
 	else if(current_game == MARIO){
 		mario_handle_init(time_layer);
 	}
+	
+	tick_timer_service_subscribe(MINUTE_UNIT, handle_tick);
+	
+	init_time();
 }
 
 void handle_deinit(void){

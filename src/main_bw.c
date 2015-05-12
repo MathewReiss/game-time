@@ -103,10 +103,6 @@ void handle_init_bw(void){
 	
 	if(persist_exists(GAME)) current_game = persist_read_int(GAME);
 	
-	time_t now = time(NULL);
-	struct tm *t = localtime(&now);
-	handle_tick(t, MINUTE_UNIT);
-	
 	load_game_fonts();
 	
 	gb_logo = gbitmap_create_with_resource(RESOURCE_ID_GB_LOGO);
@@ -119,6 +115,10 @@ void handle_init_bw(void){
 	window_stack_push(my_window, true);
 	
 	tick_timer_service_subscribe(MINUTE_UNIT, handle_tick);
+	
+	time_t now = time(NULL);
+	struct tm *t = localtime(&now);
+	handle_tick(t, MINUTE_UNIT);
 }
 
 void handle_deinit_bw(void){

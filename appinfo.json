@@ -12,6 +12,12 @@
     "resources": {
         "media": [
             {
+                "file": "images/gticon.png",
+                "menuIcon": true,
+                "name": "MENU_ICON",
+                "type": "png"
+            },
+            {
                 "file": "images/mario_stand.png",
                 "name": "MARIO_STAND",
                 "type": "png"
@@ -112,16 +118,6 @@
                 "type": "png"
             },
             {
-                "file": "images/dk_bg_bw.png",
-                "name": "DK_BG",
-                "type": "png"
-            },
-            {
-                "file": "images/mario_bg.png",
-                "name": "MARIO_BG",
-                "type": "png"
-            },
-            {
                 "file": "fonts/ufonts.com_arial-black-italic.ttf",
                 "name": "ARIAL_32",
                 "type": "font"
@@ -145,8 +141,7 @@
         "basalt"
     ],
     "uuid": "233d90df-fc09-4c66-9f57-261c128ea568",
-    "versionCode": 1,
-    "versionLabel": "1.0",
+    "versionLabel": "1.1",
     "watchapp": {
         "watchface": true
     }

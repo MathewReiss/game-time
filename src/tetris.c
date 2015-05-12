@@ -340,7 +340,6 @@ void tetris_init(Layer *root_layer) {
   	main_window_load(root_layer);
 
     on_settings_changed();
-	
 }
 
 void tetris_deinit() {

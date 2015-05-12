@@ -113,28 +113,28 @@ void kirby_init(Layer *layer) {
 
 void kirby_deinit(void) {
 	//window_destroy(my_window);
-	APP_LOG(APP_LOG_LEVEL_DEBUG, "deinit");
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "deinit");
 	accel_data_service_unsubscribe();
-	APP_LOG(APP_LOG_LEVEL_DEBUG, "accel unsub");
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "accel unsub");
 	layer_remove_from_parent(kirby_layer);
-	APP_LOG(APP_LOG_LEVEL_DEBUG, "kirby layer removed");
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "kirby layer removed");
 	
 	layer_destroy(kirby_layer);
 	
-	APP_LOG(APP_LOG_LEVEL_DEBUG, "kirby layer destroyed");
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "kirby layer destroyed");
 	
 	for(uint8_t i = 0; i < 7; i++){
 		gbitmap_destroy(kirby_rolling[i]);
-		APP_LOG(APP_LOG_LEVEL_DEBUG, "kirby image %i destroyed", i);
+		//APP_LOG(APP_LOG_LEVEL_DEBUG, "kirby image %i destroyed", i);
 	}
 	
 	gbitmap_destroy(k_bg);
 	
-	APP_LOG(APP_LOG_LEVEL_DEBUG, "bg destroyed");
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "bg destroyed");
 	
 	fonts_unload_custom_font(kirby_font);
 	
-	APP_LOG(APP_LOG_LEVEL_DEBUG, "font unloaded");
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "font unloaded");
 }
 
 #endif

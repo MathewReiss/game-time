@@ -222,8 +222,6 @@ static void field_init_colors(){
 	s_palette[8] = (GColor){.argb = GColorBlackARGB8 + 0b111011}; //T
 	s_palette[9] = (GColor){.argb = GColorBlackARGB8 + 0b110101}; //Z
 	colors_initialized = true;
-	
-	light_enable(true);
 }
 
 static void field_reset(PaletteColor background) {
